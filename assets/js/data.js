@@ -122,6 +122,7 @@ const WORKS = [
     material: "透明樹脂、ひまわり",
     category: "Object",
     hero: true,
+    heroPosition: "center top", // スライドショーで花が切れないよう上端基準に
     images: ["assets/img/sunflower-1.jpg", "assets/img/sunflower-2.jpg", "assets/img/sunflower-3.jpg"],
     text: [
       "私が「ひまわり」に対して感じた成長に対する違和感を表現している。",

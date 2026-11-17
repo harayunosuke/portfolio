@@ -50,7 +50,7 @@
     slidesEl.innerHTML = heroWorks
       .map((w, i) => {
         const src = w.heroImage || w.images[0];
-        const pos = w.heroPosition ? ` style="object-position:${w.heroPosition}"` : "";
+        const pos = w.heroPosition ? ` style="object-position:${w.heroPosition};transform-origin:${w.heroPosition}"` : "";
         return `<div class="hero-slide${i === 0 ? " is-active" : ""}">
           <img class="hero-bg" src="${src}" alt="" aria-hidden="true">
           <img class="hero-img" src="${src}" alt="${w.title}"${pos}></div>`;
