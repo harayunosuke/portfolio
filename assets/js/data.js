@@ -192,7 +192,7 @@ const WORKS = [
     year: "2026",
     material: "ミクストメディア",
     category: "Installation",
-    images: ["assets/img/device003-1.jpg", "assets/img/device003-2.jpg", "assets/img/device003-3.jpg"],
+    images: ["assets/img/device003-2.jpg", "assets/img/device003-1.jpg", "assets/img/device003-3.jpg"],
     // 作品ページでトップ写真の次に表示するYouTube動画（IDのみ）
     youtube: "IFIanbxnVFA",
     text: [
