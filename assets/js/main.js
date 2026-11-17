@@ -205,6 +205,20 @@
       <div class="next-work"><small>Next</small><a href="${workUrl(next)}" class="arrow-link">${next.title}</a></div>`;
   }
 
+  /* ---- 動画の音：ブラウザの制限で最初はミュート。最初のタップ／クリック／キー操作で音を出す ---- */
+  const clips = $$(".detail-clip video");
+  if (clips.length) {
+    const unmute = () => {
+      clips.forEach((v) => {
+        v.muted = false;
+        v.volume = 1;
+        v.play().catch(() => {});
+      });
+      ["pointerdown", "keydown", "touchend"].forEach((ev) => document.removeEventListener(ev, unmute, true));
+    };
+    ["pointerdown", "keydown", "touchend"].forEach((ev) => document.addEventListener(ev, unmute, true));
+  }
+
   /* ---- Scroll reveal ---- */
   function observe() {
     const limit = window.innerHeight * 0.92;
