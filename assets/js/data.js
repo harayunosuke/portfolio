@@ -193,6 +193,8 @@ const WORKS = [
     material: "ミクストメディア",
     category: "Installation",
     images: ["assets/img/device003-1.jpg", "assets/img/device003-2.jpg", "assets/img/device003-3.jpg"],
+    // 作品ページでトップ写真の次に表示するYouTube動画（IDのみ）
+    youtube: "IFIanbxnVFA",
     text: [
       "この装置は感覚的観察装置001の装置中央部の装置に回転装置を組み込んでいる。複製物が回転を行うことで静的な光の現象に動きが生み出されている。石の肌を直線的な光がなぞっている。冷たいレーザーの光と冷たくなった石の肌を使ってドラマチックな瞬間を生み出したかった。",
     ],
