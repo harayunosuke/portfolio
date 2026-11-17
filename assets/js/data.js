@@ -116,6 +116,7 @@ const WORKS = [
     year: "2026",
     material: "（仮）",
     category: "Installation",
+    heroImage: "assets/img/shibuya-hero.jpg", // スライドショー用（高画質 3200px）
     images: ["assets/img/shibuya-1.jpg", "assets/img/shibuya-2.jpg"],
     // 作品ページでトップ写真の次に表示するYouTube動画（IDのみ）
     youtube: "kD9faC07OQA",
@@ -286,6 +287,7 @@ const WORKS = [
     year: "2024",
     material: "赤松",
     category: "Furniture",
+    heroImage: "assets/img/slits-hero.jpg", // スライドショー用（高画質 3200px）
     images: ["assets/img/slits-3.jpg", "assets/img/slits-1.jpg", "assets/img/slits-2.jpg"],
     text: [
       "家具デザインの領域においては、針葉樹は、家具に向いていないとされてきた。その原因は柔らかさである。硬い広葉樹と比べて強度はない。柔らかいため、傷がつきやすいなどの問題がある。その問題に対して私は、「木は硬くないと家具に向いていない」という常識が針葉樹の可能性を隔てていると感じた。",
