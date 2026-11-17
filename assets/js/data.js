@@ -146,7 +146,7 @@ const WORKS = [
     material: "透明樹脂、ひまわり",
     category: "Sculpture",
     heroPosition: "left top", // スライドショーで花が切れないよう左上基準に（スマホの正方形でも花が入る）
-    images: ["assets/img/sunflower-1.jpg", "assets/img/sunflower-2.jpg", "assets/img/sunflower-3.jpg"],
+    images: ["assets/img/sunflower-1.jpg", "assets/img/sunflower-2.jpg", "assets/img/sunflower-3.jpg", "assets/img/sunflower-blender.jpg"],
     text: [
       "私が「ひまわり」に対して感じた成長に対する違和感を表現している。",
       "CADなどをはじめとする仮想空間での造形作業は、空間や時間の概念が物質的な現実空間での制作とは大きく異なる。一般的にCAD上に置いたオブジェクトが時間経過や環境変化によって、劣化したり、成長することなく形状とデータが維持される。コマンドZを使えば記録を遡る体験は、時間の不可逆性すらも感じさせる。",
