@@ -12,7 +12,7 @@ const SITE = {
   statement: "Continually Encountering<br>Unknown Possibilities.",
   // トップのAbout欄に出す短い紹介
   about:
-    "日常で見慣れた物事を、デジタル技術によって複製・変形することで生まれる新たな形態や、複製の過程で失われる性質に関心を持っている。<br><br>複製技術によって再現できるものとできないものの差異に着目し、普段は意識されない対象の性質を、視覚や触覚を通して感覚的に捉えることのできる芸術表現を探求している。",
+    "日常で見慣れた物事を、技術によって複製・変形することで生まれる新たな形態や、複製の過程で失われる性質をテーマに制作している。<br><br>複製技術によって再現できる性質とできない性質の差異に着目し、普段は意識されない対象の性質を、視覚や触覚を通して感覚的に捉えることのできる芸術表現を探求している。",
   email: "yunosuke.hara.0709@gmail.com",
   instagram: "https://www.instagram.com/hara.yunosuke/",
   location: "Tokyo, Japan",
