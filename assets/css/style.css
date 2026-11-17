@@ -293,3 +293,6 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   .detail-gallery { gap: 24px; }
   .cv ul { margin-bottom: 48px; }
 }
+
+/* スマホのheroは横スワイプで切替（縦スクロールは通常どおり） */
+.hero { touch-action: pan-y; }
