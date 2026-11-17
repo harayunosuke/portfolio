@@ -85,6 +85,19 @@ const HERO = [
   "slits-stool",
 ];
 
+/* 感覚的観察装置シリーズ共通のコンセプト文（001・002・003 の作品ページに表示） */
+const STONE_CONCEPT = {
+  ja: [
+        "この作品は宮城県大蔵山にある採石場で採取した石を3Dスキャンを用いてデータ化し、3Dプリンターで複製した物を演出装置の中心部に設置している。石は切削、研磨、破壊などの加工をしても内側から石としての情報が新たに表面に表れる。対して、複製物は表面に石と同様の行為を行うと、複製に用いた材料の性質に近づき、石の情報が次第になくなっていく。石の複製物においては、表面の情報が複製物を複製物たらしめる情報である。",
+        "レーザーの光を当てて起きる現象は、複製された石の冷たさとは裏腹に熱さを感じるようなドラマチックな光の彫刻である。複製技術によって石が持っている内側の存在について思考、想像する行為のきっかけが生まれる。視覚的に捉える事のできない内側について感覚的に想像を行う事で自らの世界の認識について再考するための行為である。",
+        "Fieldwork — 2025年8月に宮城県南部の阿武隈山系北端に位置する標高300mほどにある大蔵山スタジオ株式会社を訪問し、フィールドワークを行った。約100年前に伊達冠石の採掘が始まり、多くの地元の方々が農業や林業のかたわら採石業に従事していた。第二次大戦後、石積み工事や墓石材などに使われた伊達冠石は、イサム・ノグチをはじめとする彫刻家やアーティストに注目され、次第に彫刻作品やモニュメントに加工されていった。",
+  ],
+  en: [
+        "This work features replicas created using a 3D printer from stones collected at a quarry on Mount Okurayama in Miyagi Prefecture, which were first digitized via 3D scanning; these replicas are installed at the center of the installation. Even when the stone is processed—through cutting, polishing, or breaking—information inherent to the stone as a natural material emerges anew from within onto its surface. In contrast, when the same treatments are applied to the replica’s surface, it begins to resemble the properties of the material used to create it, and the stone’s inherent information gradually disappears. In the case of the stone replica, it is the information on its surface that defines it as a replica.",
+        "The phenomenon created by shining a laser beam is a dramatic light sculpture that evokes a sensation of heat—in stark contrast to the coldness of the replicated stone. Replication technology provides an opportunity to reflect on and imagine the inner essence inherent in the stone. By sensually imagining the inner world that cannot be visually perceived, this work invites viewers to reconsider their own perception of the world.",
+  ],
+};
+
 /* 作品一覧（新しい順）
    images の1枚目がサムネイル（作品ページの最初の写真）になります */
 const WORKS = [
@@ -197,9 +210,11 @@ const WORKS = [
     youtube: "IFIanbxnVFA",
     text: [
       "この装置は感覚的観察装置001の装置中央部の装置に回転装置を組み込んでいる。複製物が回転を行うことで静的な光の現象に動きが生み出されている。石の肌を直線的な光がなぞっている。冷たいレーザーの光と冷たくなった石の肌を使ってドラマチックな瞬間を生み出したかった。",
+      ...STONE_CONCEPT.ja,
     ],
     textEn: [
       "This device incorporates a rotating mechanism into the central section of Sensory Observation Device 001. The rotation of the replica creates a sense of movement within the static light phenomenon. Linear beams of light trace the surface of the stone. I wanted to create a dramatic moment using the cold laser light and the chilled surface of the stone.",
+      ...STONE_CONCEPT.en,
     ],
   },
   {
@@ -213,9 +228,11 @@ const WORKS = [
     images: ["assets/img/device002-3.jpg", "assets/img/device002-1.jpg", "assets/img/device002-2.jpg"],
     text: [
       "この装置は、高さ約1000mm、直径約400mmのキューブ状の形体で装置が組まれている。感覚的観察装置001の伊達冠石よりも、どっしりと構えたような安定した造形である。北極にある氷塊のような造形が、屈折によって糸くずの様な繊細な表情を生み出している。",
+      ...STONE_CONCEPT.ja,
     ],
     textEn: [
       "This installation is assembled into a cube-shaped form approximately 1,000 mm high and 400 mm in diameter. Its form is more solid and stable than the Date Kanmuri stone of “Sensory Observation Device 001.” The design, reminiscent of an ice block in the Arctic, creates a delicate, thread-like appearance through refraction.",
+      ...STONE_CONCEPT.en,
     ],
   },
   {
@@ -256,13 +273,10 @@ const WORKS = [
       "assets/img/device001-5.jpg",
     ],
     text: [
-      "この作品は宮城県大蔵山にある採石場で採取した石を3Dスキャンを用いてデータ化し、3Dプリンターで複製した物を演出装置の中心部に設置している。石は切削、研磨、破壊などの加工をしても内側から石としての情報が新たに表面に表れる。対して、複製物は表面に石と同様の行為を行うと、複製に用いた材料の性質に近づき、石の情報が次第になくなっていく。石の複製物においては、表面の情報が複製物を複製物たらしめる情報である。",
-      "レーザーの光を当てて起きる現象は、複製された石の冷たさとは裏腹に熱さを感じるようなドラマチックな光の彫刻である。複製技術によって石が持っている内側の存在について思考、想像する行為のきっかけが生まれる。視覚的に捉える事のできない内側について感覚的に想像を行う事で自らの世界の認識について再考するための行為である。",
-      "Fieldwork — 2025年8月に宮城県南部の阿武隈山系北端に位置する標高300mほどにある大蔵山スタジオ株式会社を訪問し、フィールドワークを行った。約100年前に伊達冠石の採掘が始まり、多くの地元の方々が農業や林業のかたわら採石業に従事していた。第二次大戦後、石積み工事や墓石材などに使われた伊達冠石は、イサム・ノグチをはじめとする彫刻家やアーティストに注目され、次第に彫刻作品やモニュメントに加工されていった。",
+      ...STONE_CONCEPT.ja,
     ],
     textEn: [
-      "This work features replicas created using a 3D printer from stones collected at a quarry on Mount Okurayama in Miyagi Prefecture, which were first digitized via 3D scanning; these replicas are installed at the center of the installation. Even when the stone is processed—through cutting, polishing, or breaking—information inherent to the stone as a natural material emerges anew from within onto its surface. In contrast, when the same treatments are applied to the replica’s surface, it begins to resemble the properties of the material used to create it, and the stone’s inherent information gradually disappears. In the case of the stone replica, it is the information on its surface that defines it as a replica.",
-      "The phenomenon created by shining a laser beam is a dramatic light sculpture that evokes a sensation of heat—in stark contrast to the coldness of the replicated stone. Replication technology provides an opportunity to reflect on and imagine the inner essence inherent in the stone. By sensually imagining the inner world that cannot be visually perceived, this work invites viewers to reconsider their own perception of the world.",
+      ...STONE_CONCEPT.en,
     ],
   },
   {
