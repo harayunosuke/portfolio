@@ -186,7 +186,7 @@
           .join("")
       }
       <div class="detail-body">
-        <div class="detail-meta"><dl class="detail-credits">${[["Date", w.date], ["Material", w.material], ["Category", w.category]]
+        <div class="detail-meta"><dl class="detail-credits">${[["Date", w.date], ["Material", w.material], ["Category", w.category], ["Collaboration", w.collab]]
           .filter(([, v]) => v)
           .map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`)
           .join("")}</dl>${
