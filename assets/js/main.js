@@ -236,6 +236,37 @@
     ["pointerdown", "keydown", "touchend"].forEach((ev) => document.addEventListener(ev, unmute, true));
   }
 
+  /* ---- ページ内リンク（#contact など）：作品一覧の描画・画像読み込みで位置がずれるので、確実に目的地まで移動 ---- */
+  const jumpTo = (hash, smooth) => {
+    const el = hash && hash.length > 1 && document.getElementById(hash.slice(1));
+    if (!el) return;
+    // 目的地より上の遅延読み込み画像を先に読み込ませ、レイアウトを確定させる
+    $$('img[loading="lazy"]').forEach((img) => (img.loading = "eager"));
+    const target = () => Math.min(el.getBoundingClientRect().top + window.scrollY, document.documentElement.scrollHeight - window.innerHeight);
+    window.scrollTo({ top: target(), behavior: smooth ? "smooth" : "instant" });
+    const until = Date.now() + 3000;
+    const fix = () => {
+      if (Date.now() > until) return;
+      const t = target();
+      if (Math.abs(window.scrollY - t) > 4) window.scrollTo({ top: t, behavior: "instant" });
+      setTimeout(fix, 250);
+    };
+    setTimeout(fix, smooth ? 900 : 100);
+  };
+  $$('a[href^="#"]').forEach((a) =>
+    a.addEventListener("click", (e) => {
+      const h = a.getAttribute("href");
+      if (h.length < 2 || !document.getElementById(h.slice(1))) return;
+      e.preventDefault();
+      history.replaceState(null, "", h);
+      jumpTo(h, true);
+    })
+  );
+  if (location.hash) {
+    jumpTo(location.hash, false);
+    window.addEventListener("load", () => jumpTo(location.hash, false));
+  }
+
   /* ---- Scroll reveal ---- */
   function observe() {
     const limit = window.innerHeight * 0.92;
