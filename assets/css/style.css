@@ -267,8 +267,10 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
    ========================================================== */
 @media (max-width: 820px) {
   :root { --gutter: 16px; }
-  .site-header { grid-template-columns: 1fr auto; }
-  .site-header .nav, .site-header .lang, .site-header .insta { display: none; }
+  .site-header { grid-template-columns: 1fr auto auto; gap: 0 20px; }
+  .site-header .nav, .site-header .lang { display: none; }
+  .site-header .insta, .site-header.is-collapsed .insta { display: flex; opacity: 1; pointer-events: auto; }
+  .site-header .insta svg { width: 18px; height: 18px; }
   .site-header .menu-btn { display: block; position: static; transform: none; justify-self: end; }
   .site-header.is-collapsed .brand { opacity: 1; pointer-events: auto; }
   .brand-sub { display: none; }
