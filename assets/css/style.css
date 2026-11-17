@@ -211,7 +211,11 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .detail-head .page-title { grid-column: 1 / 8; margin: 0; }
 .detail-head .detail-sub { grid-column: 1 / 8; color: #555; font-size: 15px; }
 /* 大きい写真：切り抜かず、画面の高さに収める */
-.detail-hero { width: auto; max-width: 100%; height: auto; max-height: calc(100vh - 140px); margin: 0 auto 80px; }
+/* 最初の画面（タイトル＋写真）に写真全体が収まるよう高さを制限 */
+.page-detail { padding-top: 96px; }
+.page-detail .detail-head { margin-bottom: 28px; row-gap: 6px; }
+.page-detail .page-title { font-size: clamp(28px, 3vw, 44px); }
+.detail-hero { width: auto; max-width: 100%; height: auto; max-height: calc(100vh - 260px); max-height: calc(100svh - 260px); margin: 0 auto 80px; }
 .detail-body { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); margin-bottom: 100px; }
 .detail-credits { grid-column: 1 / 4; color: var(--mute); }
 .detail-credits div { display: grid; grid-template-columns: 7em 1fr; }
