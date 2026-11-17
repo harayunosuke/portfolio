@@ -84,7 +84,7 @@ const HERO = [
   "wind-light",
   "shibuya",
   "sensory-observation-device-001",
-  "structure",
+  "slits-stool",
 ];
 
 /* 作品一覧（新しい順）
@@ -286,7 +286,7 @@ const WORKS = [
     year: "2024",
     material: "赤松",
     category: "Furniture",
-    images: ["assets/img/slits-1.jpg", "assets/img/slits-2.jpg", "assets/img/slits-3.jpg"],
+    images: ["assets/img/slits-3.jpg", "assets/img/slits-1.jpg", "assets/img/slits-2.jpg"],
     text: [
       "家具デザインの領域においては、針葉樹は、家具に向いていないとされてきた。その原因は柔らかさである。硬い広葉樹と比べて強度はない。柔らかいため、傷がつきやすいなどの問題がある。その問題に対して私は、「木は硬くないと家具に向いていない」という常識が針葉樹の可能性を隔てていると感じた。",
       "カーフベンディング（Kerf Bending）という技術は、切り込みを入れることで、木材が柔らかくなる技術である。しかし、この技術は曲げるための技術として扱われ、最終的には木材の柔らかさを身体で感じることを重視されてこなかった。私は、柔らかい座り心地を求め、ピッチやスリットの長さの研究を行い、アカマツの加工性の高さと柔らかさを共存させた椅子を制作した。",
