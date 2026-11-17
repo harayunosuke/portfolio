@@ -179,10 +179,16 @@
           .join("")
       }
       <div class="detail-body">
-        <dl class="detail-credits">${[["Date", w.date], ["Material", w.material], ["Category", w.category]]
+        <div class="detail-meta"><dl class="detail-credits">${[["Date", w.date], ["Material", w.material], ["Category", w.category]]
           .filter(([, v]) => v)
           .map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`)
-          .join("")}</dl>
+          .join("")}</dl>${
+          w.awards && w.awards.length
+            ? `<div class="detail-awards"><h2>Award</h2><ul>${w.awards
+                .map(([y, a, v]) => `<li><span>${y}</span><span>${a}${v ? `<small>${v}</small>` : ""}</span></li>`)
+                .join("")}</ul></div>`
+            : ""
+        }</div>
         <div class="detail-text">
           ${paras(w.text)}
           ${w.textEn && w.textEn.length ? `<div class="detail-en">${paras(w.textEn)}</div>` : ""}

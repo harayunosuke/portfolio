@@ -166,6 +166,10 @@ const WORKS = [
     year: "2026",
     material: "風",
     category: "Light",
+    // 作品ページに表示する受賞・入選歴 [年, 賞, 展示]
+    awards: [
+      ["2026", "「bud brand AWARD 2026」入選", "ミラノデザインウィーク展示"],
+    ],
     heroPosition: "right center", // ランプが右側にあるので右基準（スマホの正方形で切れないように）
     images: ["assets/img/wind-1.jpg", "assets/img/wind-2.jpg", "assets/img/wind-3.jpg", "assets/img/wind-4.jpg"],
     text: [
@@ -306,6 +310,13 @@ const WORKS = [
     year: "2024",
     material: "赤松",
     category: "Furniture",
+    // 作品ページに表示する受賞・入選歴 [年, 賞, 展示]
+    awards: [
+      ["2025", "「bud brand AWARD 2025」奨励賞", "ミラノデザインウィーク展示"],
+      ["2024", "「JIDAWARD 2024 NEXTAGE部門」銀賞", "リビングデザインセンター展示"],
+      ["2024", "「グッドデザイン・ニューホープアワード」入選", "六本木ミッドタウン パネル展示"],
+      ["2024", "「木材を使った家具のデザインコンペ 2024」銀賞", "LIVING&DESIGN / 東京ビッグサイト展示"],
+    ],
     heroImage: "assets/img/slits-hero.jpg", // スライドショー用（高画質 3200px）
     images: ["assets/img/slits-3.jpg", "assets/img/slits-1.jpg", "assets/img/slits-2.jpg"],
     // 作品ページでトップ写真の次に表示する動画（自動再生・ループ・無音で開始）
