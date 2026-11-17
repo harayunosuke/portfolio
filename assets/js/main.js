@@ -128,12 +128,19 @@
         .map(
           (w) => `<article class="reveal"><a href="${workUrl(w)}">
             <div class="work-thumb${w.images.length ? "" : " placeholder"}">${
-              w.images.length ? `<img src="${w.images[0]}" alt="${w.title}" loading="lazy">` : "Image coming soon"
+              w.images.length
+                ? `<img class="thumb-bg" src="${w.images[0]}" alt="" aria-hidden="true" loading="lazy"><img class="thumb-img" src="${w.images[0]}" alt="${w.title}" loading="lazy">`
+                : "Image coming soon"
             }</div>
             <div class="work-meta"><span class="work-title">${w.title}</span><span class="work-sub">${w.year} — ${w.category}</span></div>
           </a></article>`
         )
         .join("");
+      // 3:2の枠に統一。正方形・縦長の写真は切らずに全体表示（背景にぼかし）
+      $$(".thumb-img", grid).forEach((img) => {
+        const set = () => img.naturalWidth / img.naturalHeight < 1.2 && img.parentElement.classList.add("is-contain");
+        img.complete && img.naturalWidth ? set() : img.addEventListener("load", set);
+      });
       observe();
     };
     const cats = ["All", ...new Set(WORKS.map((w) => w.category))];
