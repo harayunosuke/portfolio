@@ -21,10 +21,10 @@ const SITE = {
 /* ステートメント全文（Aboutページ） */
 const STATEMENT = {
   ja: [
-    "私が技術に魅力を感じるのは、自分の身体や能力を拡張し、想像を超えた形や現象に出会わせてくれるからである。制作における選択や判断は私自身が行うが、その実行の多くは機械に委ねられている。機械が生み出した結果が次の選択に影響し、互いに作用し合いながら制作が進んでいく。その中で大切にしているのは、対象が持つ「そのものらしさ」である。それは固定された特徴ではなく、他のものとの比較や、性質の組み合わせによって感じられるものだと考えている。私にとって技術は、決められた目的を達成するためだけの道具ではない。日常の経験と技術が持つ固有の性質を結びつけ、その振る舞いを観察しながら、自分自身もまだ知らない形や景色を探っている。私にとって制作とは、そうした未知の可能性に出会い続ける行為である。",
+    "日常の経験から生まれる疑問を出発点に、デジタル技術を用いて身近な物事を複製・変形する作品を制作してきた。複製技術によって再現される性質と失われる性質の差異に着目し、複製の過程で生まれる新たな形態や、元の対象との関係性を探っている。日常の物事と複製技術を結びつけることで、普段は意識されない対象の性質や、物事に対する認識の変化を提示している。",
   ],
   en: [
-    "What fascinates me about technology is that it extends my body and abilities, allowing me to encounter forms and phenomena that go beyond what I could imagine. While I make the choices and decisions in the creative process myself, much of the execution is entrusted to machines. The results they produce influence my next choices, and the work develops through this ongoing interaction. What I value most in this process is the inherent character of the subject—what makes it what it is. I believe this is not a fixed characteristic, but something perceived through comparison with other things or through particular combinations of qualities. Technology, for me, is not merely a tool for achieving a predetermined goal. By connecting everyday experiences with the inherent properties of technology and observing how they interact, I explore forms and landscapes that even I have yet to discover. For me, making work is an act of continually encountering such unknown possibilities.",
+    "Taking questions that arise from everyday experience as a starting point, I have created works that replicate and transform familiar things using digital technology. Focusing on the difference between the qualities that replication technologies can reproduce and those that are lost, I explore the new forms that emerge through the process of replication and their relationship to the original subject. By connecting everyday things with replication technologies, I reveal qualities of the subject that usually go unnoticed, and present shifts in the way we perceive things.",
   ],
 };
 
