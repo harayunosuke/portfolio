@@ -173,6 +173,11 @@
           ? `<div class="detail-youtube"><iframe src="https://www.youtube-nocookie.com/embed/${w.youtube}?rel=0&playsinline=1" title="${w.title}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>`
           : ""
       }
+      ${
+        w.clip
+          ? `<div class="detail-youtube detail-clip"><video src="${w.clip.src}" poster="${w.clip.poster || ""}" autoplay muted loop playsinline controls preload="metadata" aria-label="${w.title}"></video></div>`
+          : ""
+      }
       <div class="detail-body">
         <dl class="detail-credits">${[["Date", w.date], ["Material", w.material], ["Category", w.category]]
           .filter(([, v]) => v)
