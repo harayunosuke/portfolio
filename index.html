@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yunosuke Hara — Portfolio</title>
+  <meta name="description" content="Yunosuke Hara portfolio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
+</head>
+<body class="is-home">
+
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <a href="index.html" class="brand"><span data-site="name"></span><span class="brand-sub" data-site="tagline"></span></a>
+    <nav class="nav">
+      <a href="#works">Work</a>
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="lang"><a href="#" class="is-dim">En</a><a href="#">Ja</a></div>
+    <a class="insta" data-site-href="instagram" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false">Menu</button>
+  </header>
+
+  <!-- Overlay menu -->
+  <div class="overlay" id="overlay" aria-hidden="true">
+    <nav class="overlay-nav">
+      <a href="#works">Work</a>
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Hero slideshow -->
+    <section class="hero" id="hero">
+      <div class="hero-slides" id="heroSlides"></div>
+      <div class="hero-caption">
+        <span class="hero-count" id="heroCount">1 / 5</span>
+        <a class="hero-title" id="heroTitle" href="#"></a>
+      </div>
+    </section>
+
+    <!-- Upcoming / News -->
+    <section class="news section" id="news">
+      <h2 class="label">Upcoming</h2>
+      <ul class="news-list" id="newsList"></ul>
+    </section>
+
+    <!-- Works -->
+    <section class="works" id="works">
+      <p class="statement" data-site="statement"></p>
+      <div class="works-list" id="worksList"></div>
+      <div class="more"><a href="works.html" class="arrow-link">All Works</a></div>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about">
+      <h2 class="label">About</h2>
+      <div class="about-body">
+        <p data-site="about"></p>
+        <a href="about.html" class="arrow-link">Profile / CV</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+      <h2 class="label">Contact</h2>
+      <div class="contact-body">
+        <p>制作依頼、展示、コラボレーションのご相談はこちらまで。</p>
+        <a class="contact-mail" data-site-mail></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span data-site="name"></span>
+    <div class="footer-col">
+      <span data-site="location"></span>
+      <a data-site-mail></a>
+    </div>
+    <div class="footer-col">
+      <a data-site-href="instagram" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <span>© <span data-site="name"></span></span>
+  </footer>
+
+  <script src="assets/js/data.js?v=6"></script>
+  <script src="assets/js/main.js?v=6"></script>
+</body>
+</html>
