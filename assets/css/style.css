@@ -2,12 +2,13 @@
    Base
    ========================================================== */
 :root {
-  --bg: #fffdf2;      /* 背景：白にごく近い黄色 */
-  --accent: #fffbe6;  /* 差し色：写真の上の文字など */
-  --fg: #1a1a1a;
-  --mute: #8c887a;
-  --line: #e8e3cf;
-  --tint: #f5f1df;    /* 画像読み込み前の下地 */
+  --bg: #0b0b0a;      /* 背景：黒 */
+  --accent: #fffbe6;  /* 差し色：白にごく近い黄色（写真の上の文字など） */
+  --fg: #fffbe6;      /* 本文の文字：差し色と同じ */
+  --sub: #c9c4b2;     /* サブの文字（作品のひとこと説明・英文など） */
+  --mute: #8f8b7d;    /* 日付などの補足 */
+  --line: #2b2a25;    /* 罫線 */
+  --tint: #1a1916;    /* 画像読み込み前の下地 */
   --gutter: 22px;
   --col: calc((100vw - var(--gutter) * 2) / 12);
   --font: "Inter Tight", "Noto Sans JP", system-ui, sans-serif;
@@ -27,7 +28,7 @@ body {
   overflow-x: clip;
 }
 html { background: var(--bg); }
-::selection { background: #fff3b0; color: var(--fg); }
+::selection { background: #fff3b0; color: #111; }
 .works-list { --col: calc((100% - 0px) / 12); }
 a { color: inherit; text-decoration: none; }
 img, video { display: block; max-width: 100%; }
@@ -174,7 +175,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .work-item a:hover .work-thumb img { transform: scale(1.03); }
 .work-meta { display: flex; gap: 14px; margin-top: 8px; }
 .work-title { font-weight: 500; }
-.work-sub { color: #555; }
+.work-sub { color: var(--sub); }
 .more { position: relative; z-index: 1; text-align: center; margin-top: 140px; }
 
 /* fade-in on scroll */
@@ -213,7 +214,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 
 .detail-head { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); margin-bottom: 60px; }
 .detail-head .page-title { grid-column: 1 / 8; margin: 0; }
-.detail-head .detail-sub { grid-column: 1 / 8; color: #555; font-size: 15px; }
+.detail-head .detail-sub { grid-column: 1 / 8; color: var(--sub); font-size: 15px; }
 /* 大きい写真：切り抜かず、画面の高さに収める */
 /* 最初の画面（タイトル＋写真）に写真全体が収まるよう高さを制限 */
 .page-detail { padding-top: 96px; }
@@ -230,7 +231,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .detail-credits dd { margin: 0; color: var(--fg); }
 .detail-text { grid-column: 7 / 12; font-size: 14px; line-height: 2; }
 .detail-text p + p, .cv-statement p + p { margin-top: 1.2em; }
-.detail-en { margin-top: 2.4em; color: #555; font-size: 13px; line-height: 1.9; }
+.detail-en { margin-top: 2.4em; color: var(--sub); font-size: 13px; line-height: 1.9; }
 .cv-statement { grid-column: 4 / 12; margin-bottom: 80px; font-size: 14px; line-height: 2; }
 .name-ja { font-size: .5em; color: var(--mute); }
 .detail-gallery { display: grid; grid-template-columns: repeat(12, 1fr); gap: 100px var(--gutter); }
