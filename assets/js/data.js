@@ -129,8 +129,8 @@ const WORKS = [
     category: "Installation",
     heroImage: "assets/img/shibuya-hero.jpg", // スライドショー用（高画質 3200px）
     images: ["assets/img/shibuya-1.jpg", "assets/img/shibuya-2.jpg"],
-    // 作品ページでトップ写真の次に表示するYouTube動画（IDのみ）
-    youtube: "kD9faC07OQA",
+    // 作品ページでトップ写真の次に表示する動画
+    clip: { src: "assets/video/shibuya.mp4", poster: "assets/video/shibuya-poster.jpg" },
     text: [
       "本作品では、2026年10月時点の渋谷駅周辺の航空写真を、Blenderのディスプレイス機能によって画像の明暗に応じた起伏へと変換し、3Dプリントで立体物として出力した。さらに、データ上で立体化された時に貼られていたテクスチャーを物理的な空間でも表現したいと考え、出力した立体物の表面に航空写真をプロジェクターで投影し、テクスチャーを重ねた。",
       "投影する映像には、1985年まで遡る航空写真も使用している。2026年10月時点の渋谷の形状に過去の航空写真を投影することで、現在の渋谷の造形に、過去の渋谷のテクスチャーが貼り付けられたような感覚が生まれる。",
@@ -206,8 +206,8 @@ const WORKS = [
     material: "ミクストメディア",
     category: "Installation",
     images: ["assets/img/device003-2.jpg", "assets/img/device003-1.jpg", "assets/img/device003-3.jpg"],
-    // 作品ページでトップ写真の次に表示するYouTube動画（IDのみ）
-    youtube: "IFIanbxnVFA",
+    // 作品ページでトップ写真の次に表示する動画
+    clip: { src: "assets/video/device003.mp4", poster: "assets/video/device003-poster.jpg" },
     text: [
       "この装置は感覚的観察装置001の装置中央部の装置に回転装置を組み込んでいる。複製物が回転を行うことで静的な光の現象に動きが生み出されている。石の肌を直線的な光がなぞっている。冷たいレーザーの光と冷たくなった石の肌を使ってドラマチックな瞬間を生み出したかった。",
       ...STONE_CONCEPT.ja,
@@ -309,7 +309,10 @@ const WORKS = [
     heroImage: "assets/img/slits-hero.jpg", // スライドショー用（高画質 3200px）
     images: ["assets/img/slits-3.jpg", "assets/img/slits-1.jpg", "assets/img/slits-2.jpg"],
     // 作品ページでトップ写真の次に表示する動画（自動再生・ループ・無音で開始）
-    clip: { src: "assets/video/slits-stool.mp4", poster: "assets/video/slits-stool-poster.jpg" },
+    clip: [
+      { src: "assets/video/slits-stool.mp4", poster: "assets/video/slits-stool-poster.jpg" },
+      { src: "assets/video/slits-stool-ambient.mp4", poster: "assets/video/slits-stool-ambient-poster.jpg" },
+    ],
     text: [
       "家具デザインの領域においては、針葉樹は、家具に向いていないとされてきた。その原因は柔らかさである。硬い広葉樹と比べて強度はない。柔らかいため、傷がつきやすいなどの問題がある。その問題に対して私は、「木は硬くないと家具に向いていない」という常識が針葉樹の可能性を隔てていると感じた。",
       "カーフベンディング（Kerf Bending）という技術は、切り込みを入れることで、木材が柔らかくなる技術である。しかし、この技術は曲げるための技術として扱われ、最終的には木材の柔らかさを身体で感じることを重視されてこなかった。私は、柔らかい座り心地を求め、ピッチやスリットの長さの研究を行い、アカマツの加工性の高さと柔らかさを共存させた椅子を制作した。",

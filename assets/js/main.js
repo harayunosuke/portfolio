@@ -174,9 +174,9 @@
           : ""
       }
       ${
-        w.clip
-          ? `<div class="detail-youtube detail-clip"><video src="${w.clip.src}" poster="${w.clip.poster || ""}" autoplay muted loop playsinline controls preload="metadata" aria-label="${w.title}"></video></div>`
-          : ""
+        [].concat(w.clip || [])
+          .map((c) => `<div class="detail-youtube detail-clip"><video src="${c.src}" poster="${c.poster || ""}" autoplay muted loop playsinline controls preload="metadata" aria-label="${w.title}"></video></div>`)
+          .join("")
       }
       <div class="detail-body">
         <dl class="detail-credits">${[["Date", w.date], ["Material", w.material], ["Category", w.category]]
