@@ -127,7 +127,7 @@ const WORKS = [
     date: "2026.10.26",
     year: "2026",
     material: "セブンイレブン",
-    category: "Research",
+    category: "Photo",
     images: ["assets/img/seven-1.jpg", "assets/img/seven-2.jpg", "assets/img/seven-3.jpg"],
     text: [
       "4年ほどセブンイレブン中野六丁目店で働いている。17時から18時の間に「商品」の詰まった段ボールが送られてくる。それから、私は中身をわからないものをひたすらに並べる作業をする。中身はわからないが、パッケージやラベルをみて、そのものが置かれるべき場所に配置していく。",
