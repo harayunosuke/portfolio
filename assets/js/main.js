@@ -48,9 +48,29 @@
   if (slidesEl) {
     const heroWorks = WORKS.filter((w) => w.hero && w.images.length);
     slidesEl.innerHTML = heroWorks
-      .map((w, i) => `<div class="hero-slide${i === 0 ? " is-active" : ""}"><img src="${w.heroImage || w.images[0]}" alt="${w.title}"></div>`)
+      .map((w, i) => {
+        const src = w.heroImage || w.images[0];
+        const pos = w.heroPosition ? ` style="object-position:${w.heroPosition}"` : "";
+        return `<div class="hero-slide${i === 0 ? " is-active" : ""}">
+          <img class="hero-bg" src="${src}" alt="" aria-hidden="true">
+          <img class="hero-img" src="${src}" alt="${w.title}"${pos}></div>`;
+      })
       .join("");
     const slides = $$(".hero-slide", slidesEl);
+    // 画面と写真の比率が大きく違う（＝半分近く切れる）ときは全体表示に切り替え
+    const fitHero = () => {
+      const vr = hero.offsetWidth / hero.offsetHeight;
+      slides.forEach((s) => {
+        const img = $(".hero-img", s);
+        if (!img.naturalWidth) return;
+        const ir = img.naturalWidth / img.naturalHeight;
+        const visible = Math.min(ir, vr) / Math.max(ir, vr);
+        s.classList.toggle("is-contain", visible < 0.7);
+      });
+    };
+    $$(".hero-img", slidesEl).forEach((img) => img.addEventListener("load", fitHero));
+    window.addEventListener("resize", fitHero);
+    fitHero();
     const count = $("#heroCount");
     const title = $("#heroTitle");
     let idx = 0;

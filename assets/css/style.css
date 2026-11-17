@@ -117,6 +117,11 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 }
 .hero-slide.is-active { opacity: 1; }
 .hero-slide.is-active img { transform: scale(1); }
+.hero-slide img { position: absolute; inset: 0; }
+.hero-bg { display: none; }
+/* 縦長写真など：全体を見せ、背景にぼかした同じ写真を敷く */
+.hero-slide.is-contain .hero-bg { display: block; filter: blur(40px) brightness(.55); transform: scale(1.2) !important; }
+.hero-slide.is-contain .hero-img { object-fit: contain; transform: none; }
 .hero::after { /* うっすら暗く */
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(to bottom, rgba(0,0,0,.25), transparent 25%, transparent 75%, rgba(0,0,0,.35));
@@ -159,10 +164,9 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .work-item:nth-child(4n+3) { margin-left: calc(var(--col) * 2); }
 .work-item:nth-child(4n+4) { margin-left: calc(var(--col) * 6); }
 .work-item a { display: block; }
-.work-thumb { overflow: hidden; background: #ddd; aspect-ratio: 4 / 3; }
+.work-thumb { overflow: hidden; background: #e4e4e4; }
 .work-item.is-portrait { width: calc(var(--col) * 4); }
-.work-item.is-portrait .work-thumb { aspect-ratio: 4 / 5; }
-.work-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease); }
+.work-thumb img { width: 100%; height: auto; transition: transform 1s var(--ease); }
 .work-item a:hover .work-thumb img { transform: scale(1.03); }
 .work-meta { display: flex; gap: 14px; margin-top: 8px; }
 .work-title { font-weight: 500; }
@@ -199,14 +203,15 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .filter { display: flex; gap: 18px; margin-bottom: 40px; color: var(--mute); }
 .filter button.is-active, .filter button:hover { color: var(--fg); }
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px var(--gutter); }
-.grid .work-thumb { aspect-ratio: 4 / 3; }
-.grid .placeholder { display: flex; align-items: center; justify-content: center; color: var(--mute); }
+.grid { align-items: start; }
+.grid .placeholder { aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; color: var(--mute); }
 .grid .work-meta { flex-direction: column; gap: 0; }
 
 .detail-head { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); margin-bottom: 60px; }
 .detail-head .page-title { grid-column: 1 / 8; margin: 0; }
 .detail-head .detail-sub { grid-column: 1 / 8; color: #555; font-size: 15px; }
-.detail-hero { width: 100%; max-height: 90vh; object-fit: cover; margin-bottom: 80px; }
+/* 大きい写真：切り抜かず、画面の高さに収める */
+.detail-hero { width: auto; max-width: 100%; height: auto; max-height: calc(100vh - 140px); margin: 0 auto 80px; }
 .detail-body { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); margin-bottom: 100px; }
 .detail-credits { grid-column: 1 / 4; color: var(--mute); }
 .detail-credits div { display: grid; grid-template-columns: 7em 1fr; }
@@ -217,6 +222,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .cv-statement { grid-column: 4 / 12; margin-bottom: 80px; font-size: 14px; line-height: 2; }
 .name-ja { font-size: .5em; color: var(--mute); }
 .detail-gallery { display: grid; grid-template-columns: repeat(12, 1fr); gap: 100px var(--gutter); }
+.detail-gallery img { width: auto; max-width: 100%; height: auto; max-height: 90vh; }
 .detail-gallery img:nth-child(odd)  { grid-column: 2 / 8; }
 .detail-gallery img:nth-child(even) { grid-column: 6 / 12; }
 .next-work { border-top: 1px solid var(--line); margin-top: 140px; padding-top: 40px; }
