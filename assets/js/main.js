@@ -168,6 +168,11 @@
           ? `<img class="detail-hero" src="${w.images[0]}" alt="${w.title}">`
           : ""
       }
+      ${
+        w.youtube
+          ? `<div class="detail-youtube"><iframe src="https://www.youtube-nocookie.com/embed/${w.youtube}?rel=0&playsinline=1" title="${w.title}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>`
+          : ""
+      }
       <div class="detail-body">
         <dl class="detail-credits">${[["Date", w.date], ["Material", w.material], ["Category", w.category]]
           .filter(([, v]) => v)

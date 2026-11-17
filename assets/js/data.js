@@ -110,6 +110,8 @@ const WORKS = [
     category: "Installation",
     hero: false,
     images: ["assets/img/shibuya-1.jpg", "assets/img/shibuya-2.jpg"],
+    // 作品ページでトップ写真の次に表示するYouTube動画（IDのみ）
+    youtube: "kD9faC07OQA",
     text: ["作品説明が入ります。（PDFに未掲載のため仮テキスト）"],
     textEn: [],
   },
