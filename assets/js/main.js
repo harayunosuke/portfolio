@@ -65,7 +65,7 @@
         if (!img.naturalWidth) return;
         const ir = img.naturalWidth / img.naturalHeight;
         const visible = Math.min(ir, vr) / Math.max(ir, vr);
-        s.classList.toggle("is-contain", visible < 0.7);
+        s.classList.toggle("is-contain", visible < 0.6);
       });
     };
     $$(".hero-img", slidesEl).forEach((img) => img.addEventListener("load", fitHero));

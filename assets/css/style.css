@@ -257,6 +257,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   .site-header.is-collapsed .brand { opacity: 1; pointer-events: auto; }
   .brand-sub { display: none; }
   .hero-caption { gap: 20px; }
+  /* スマホ縦：スライドショーは正方形の枠にして、横長写真を枠いっぱいに */
+  .hero { height: auto; aspect-ratio: 1 / 1; }
   .section { padding: 90px var(--gutter); }
   .section > .label, .news-list, .about-body, .contact-body { grid-column: 1 / -1; }
   .section > .label { margin-bottom: 24px; }

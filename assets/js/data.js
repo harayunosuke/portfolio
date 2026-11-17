@@ -129,7 +129,7 @@ const WORKS = [
     year: "2026",
     material: "透明樹脂、ひまわり",
     category: "Object",
-    heroPosition: "center top", // スライドショーで花が切れないよう上端基準に
+    heroPosition: "left top", // スライドショーで花が切れないよう左上基準に（スマホの正方形でも花が入る）
     images: ["assets/img/sunflower-1.jpg", "assets/img/sunflower-2.jpg", "assets/img/sunflower-3.jpg"],
     text: [
       "私が「ひまわり」に対して感じた成長に対する違和感を表現している。",
@@ -149,6 +149,7 @@ const WORKS = [
     year: "2026",
     material: "風",
     category: "Light",
+    heroPosition: "right center", // ランプが右側にあるので右基準（スマホの正方形で切れないように）
     images: ["assets/img/wind-1.jpg", "assets/img/wind-2.jpg", "assets/img/wind-3.jpg", "assets/img/wind-4.jpg"],
     text: [
       "デジタル環境において、アルゴリズムは決定論的な構造に依存しているため、単体では真にランダムな数を生成することはできない。その様な背景において、風は予測困難かつ制御不能な自然現象として、「偶然性」を持つ貴重な存在になり得る。",
