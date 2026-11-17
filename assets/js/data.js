@@ -42,7 +42,9 @@ const CV = [
     items: [
       ["2026", "「SICF27」（EXHIBITION部門 / スパイラルホール）"],
       ["2026", "「ぴすとる」（グループ展 / studio sola）"],
+      ["2026", "「Work in Progress」（武蔵野美術大学 / ando lab）"],
       ["2025", "「設計図」（Keio Fashion Creator / テレコムセンター）"],
+      ["2025", "「TANGENT」（武蔵野美術大学 / ando lab）"],
       ["2024", "「How to Dress Love？ Fashion Show」（Keio Fashion Creator / Studio Earth）"],
       ["2023", "「来夢」（グループ展 / Rukki Art&Croft Gallery）"],
     ],
