@@ -106,7 +106,7 @@
   if (worksList) {
     worksList.innerHTML = WORKS.filter((w) => w.images.length)
       .map(
-        (w) => `<article class="work-item reveal">
+        (w) => `<article class="work-item reveal" data-id="${w.id}">
           <a href="${workUrl(w)}">
             <div class="work-thumb"><img src="${w.images[0]}" alt="${w.title}" loading="lazy"></div>
             <div class="work-meta"><span class="work-title">${w.title}</span><span class="work-sub">${w.sub}</span></div>

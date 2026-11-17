@@ -276,6 +276,9 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   .works-list { gap: 80px; }
   .work-item, .work-item.is-portrait { width: 86% !important; margin-left: 0 !important; }
   .work-item:nth-child(even) { margin-left: 14% !important; }
+  /* セブンイレブンは正方形に近く大きく見えるので少し小さく */
+  .work-item[data-id="seven-eleven-texture"] { width: 72% !important; }
+  .work-item[data-id="seven-eleven-texture"]:nth-child(even) { margin-left: 28% !important; }
   .work-meta { flex-direction: column; gap: 0; }
   .site-footer { grid-template-columns: 1fr 1fr; }
   .grid { grid-template-columns: 1fr; }
