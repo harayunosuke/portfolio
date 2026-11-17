@@ -161,7 +161,13 @@
         <h1 class="page-title">${w.title}</h1>
         <p class="detail-sub">${w.sub}</p>
       </div>
-      ${w.images[0] ? `<img class="detail-hero" src="${w.images[0]}" alt="${w.title}">` : ""}
+      ${
+        w.video
+          ? `<video class="detail-hero" src="${w.video}" poster="${w.poster || ""}" autoplay muted loop playsinline preload="auto" aria-label="${w.title}"></video>`
+          : w.images[0]
+          ? `<img class="detail-hero" src="${w.images[0]}" alt="${w.title}">`
+          : ""
+      }
       <div class="detail-body">
         <dl class="detail-credits">${[["Date", w.date], ["Material", w.material], ["Category", w.category]]
           .filter(([, v]) => v)
@@ -172,7 +178,7 @@
           ${w.textEn && w.textEn.length ? `<div class="detail-en">${paras(w.textEn)}</div>` : ""}
         </div>
       </div>
-      <div class="detail-gallery">${w.images.slice(1).map((src) => `<img class="reveal" src="${src}" alt="" loading="lazy">`).join("")}</div>
+      <div class="detail-gallery">${w.images.slice(w.video ? 0 : 1).map((src) => `<img class="reveal" src="${src}" alt="" loading="lazy">`).join("")}</div>
       <div class="next-work"><small>Next</small><a href="${workUrl(next)}" class="arrow-link">${next.title}</a></div>`;
   }
 

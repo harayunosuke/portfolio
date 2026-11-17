@@ -163,7 +163,10 @@ const WORKS = [
     material: "ミクストメディア",
     category: "Installation",
     hero: false,
-    images: ["assets/img/device004-1.jpg", "assets/img/device004-2.jpg", "assets/img/device004-3.jpg"],
+    images: ["assets/img/device004-3.jpg", "assets/img/device004-1.jpg", "assets/img/device004-2.jpg"],
+    // 作品ページのトップに表示する動画（自動再生・ループ・無音）
+    video: "assets/video/device004.mp4",
+    poster: "assets/video/device004-poster.jpg",
     text: [
       "この装置はデルタ型の3Dプリンターの機構にフィラメントを出力するノズル部分にレーザーを組み込み、3Dプリンターによる複製物が造形されるプログラムで照射が行われる。3Dプリンターは、精度、速度、再現性などを高める方向で発展してきた。従来は造形のための手段にすぎなかった機械の軌道や動きそのものを、鑑賞の対象にする試みである。",
     ],
