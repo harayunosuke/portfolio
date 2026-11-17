@@ -2,10 +2,12 @@
    Base
    ========================================================== */
 :root {
-  --bg: #f2f2f2;
+  --bg: #fffdf2;      /* 背景：白にごく近い黄色 */
+  --accent: #fffbe6;  /* 差し色：写真の上の文字など */
   --fg: #1a1a1a;
-  --mute: #8a8a8a;
-  --line: #d6d6d6;
+  --mute: #8c887a;
+  --line: #e8e3cf;
+  --tint: #f5f1df;    /* 画像読み込み前の下地 */
   --gutter: 22px;
   --col: calc((100vw - var(--gutter) * 2) / 12);
   --font: "Inter Tight", "Noto Sans JP", system-ui, sans-serif;
@@ -24,6 +26,8 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;
 }
+html { background: var(--bg); }
+::selection { background: #fff3b0; color: var(--fg); }
 .works-list { --col: calc((100% - 0px) / 12); }
 a { color: inherit; text-decoration: none; }
 img, video { display: block; max-width: 100%; }
@@ -57,7 +61,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   color: var(--fg);
   transition: color .4s var(--ease);
 }
-.is-home .site-header.on-hero { color: #fff; }
+.is-home .site-header.on-hero { color: var(--accent); }
 .menu-open .site-header { color: var(--fg) !important; }
 .menu-open .site-header .brand, .menu-open .site-header .lang,
 .menu-open .site-header .insta, .menu-open .site-header .nav { opacity: 0; pointer-events: none; }
@@ -129,7 +133,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 }
 .hero-caption {
   position: absolute; left: var(--gutter); bottom: 18px; z-index: 2;
-  display: flex; gap: 42px; color: #fff; font-weight: 500;
+  display: flex; gap: 42px; color: var(--accent); font-weight: 500;
 }
 .hero-title::after { content: " →"; }
 .hero-title:hover { opacity: .6; }
@@ -164,7 +168,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .work-item:nth-child(4n+3) { margin-left: calc(var(--col) * 2); }
 .work-item:nth-child(4n+4) { margin-left: calc(var(--col) * 6); }
 .work-item a { display: block; }
-.work-thumb { overflow: hidden; background: #e4e4e4; }
+.work-thumb { overflow: hidden; background: var(--tint); }
 .work-item.is-portrait { width: calc(var(--col) * 4); }
 .work-thumb img { width: 100%; height: auto; transition: transform 1s var(--ease); }
 .work-item a:hover .work-thumb img { transform: scale(1.03); }
