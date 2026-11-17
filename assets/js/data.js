@@ -13,8 +13,8 @@ const SITE = {
   // トップのAbout欄に出す短い紹介
   about:
     "3Dスキャンや3Dプリンター、CADといった技術を用いて制作を行う。出発点にあるのは、日常生活の中で感じる些細な疑問や違和感、そして純粋な好奇心である。日常の経験と技術が持つ固有の性質を結びつけ、その振る舞いを観察しながら、自分自身もまだ知らない形や景色を探っている。",
-  email: "info@example.com", // （仮）
-  instagram: "https://www.instagram.com/", // （仮）
+  email: "yunosuke.hara.0709@gmail.com",
+  instagram: "https://www.instagram.com/hara.yunosuke/",
   location: "Tokyo, Japan",
 };
 
