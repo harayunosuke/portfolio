@@ -7,6 +7,7 @@
 const SITE = {
   name: "Yunosuke Hara",
   nameJa: "原 優ノ介",
+  born: "2003年埼玉生まれ　駒沢育ち",
   tagline: "Artist / Designer", // （仮）肩書き
   // トップ中央のコピー（ステートメント末尾の一文から）
   statement: "Continually Encountering<br>Unknown Possibilities.",

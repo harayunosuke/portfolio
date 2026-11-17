@@ -248,6 +248,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .detail-en { margin-top: 2.4em; color: var(--sub); font-size: 13px; line-height: 1.9; }
 .cv-statement { grid-column: 4 / 12; margin-bottom: 80px; font-size: 14px; line-height: 2; }
 .name-ja { font-size: .5em; color: var(--fg); }
+.page-title:has(+ .profile-born) { margin-bottom: 20px; }
+.profile-born { margin-bottom: 80px; color: var(--sub); font-size: 14px; }
 .detail-gallery { display: grid; grid-template-columns: repeat(12, 1fr); gap: 100px var(--gutter); }
 .detail-gallery img { width: auto; max-width: 100%; height: auto; max-height: 90vh; }
 .detail-gallery img:nth-child(odd)  { grid-column: 2 / 8; }
