@@ -240,18 +240,31 @@
   const jumpTo = (hash, smooth) => {
     const el = hash && hash.length > 1 && document.getElementById(hash.slice(1));
     if (!el) return;
-    // 目的地より上の遅延読み込み画像を先に読み込ませ、レイアウトを確定させる
+    // 目的地より上の遅延読み込み画像を先に読み込ませ、レイアウトを早く確定させる
     $$('img[loading="lazy"]').forEach((img) => (img.loading = "eager"));
     const target = () => Math.min(el.getBoundingClientRect().top + window.scrollY, document.documentElement.scrollHeight - window.innerHeight);
-    window.scrollTo({ top: target(), behavior: smooth ? "smooth" : "instant" });
-    const until = Date.now() + 3000;
-    const fix = () => {
-      if (Date.now() > until) return;
-      const t = target();
-      if (Math.abs(window.scrollY - t) > 4) window.scrollTo({ top: t, behavior: "instant" });
-      setTimeout(fix, 250);
+    const behavior = smooth ? "smooth" : "instant";
+    window.scrollTo({ top: target(), behavior });
+    // スクロールが止まってから、ずれていればもう一度移動（途中で一気に飛ばさない）
+    let cancelled = false, last = -1, still = 0, rounds = 0;
+    const until = Date.now() + 4000;
+    const cancel = () => (cancelled = true);
+    ["touchstart", "wheel"].forEach((ev) => window.addEventListener(ev, cancel, { passive: true, once: true }));
+    const check = () => {
+      if (cancelled || Date.now() > until) return;
+      const y = window.scrollY;
+      still = Math.abs(y - last) < 1 ? still + 1 : 0;
+      last = y;
+      if (still >= 2) {
+        const t = target();
+        if (Math.abs(y - t) <= 4) return; // 到着
+        if (++rounds > 6) return;
+        window.scrollTo({ top: t, behavior });
+        still = 0;
+      }
+      setTimeout(check, 120);
     };
-    setTimeout(fix, smooth ? 900 : 100);
+    setTimeout(check, 200);
   };
   $$('a[href^="#"]').forEach((a) =>
     a.addEventListener("click", (e) => {
