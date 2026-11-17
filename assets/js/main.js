@@ -46,7 +46,7 @@
   /* ---- Hero slideshow ---- */
   const slidesEl = $("#heroSlides");
   if (slidesEl) {
-    const heroWorks = WORKS.filter((w) => w.hero && w.images.length);
+    const heroWorks = HERO.map((id) => WORKS.find((w) => w.id === id)).filter((w) => w && w.images.length);
     slidesEl.innerHTML = heroWorks
       .map((w, i) => {
         const src = w.heroImage || w.images[0];

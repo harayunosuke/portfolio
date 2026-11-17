@@ -77,9 +77,18 @@ const NEWS = [
   { date: "2026", text: "グループ展「ぴすとる」に参加", place: "studio sola" },
 ];
 
+/* トップのスライドショーに出す作品（この順番で表示）
+   各作品の heroImage があればそれを、なければ images の1枚目を使います */
+const HERO = [
+  "from-sunflower",
+  "wind-light",
+  "shibuya",
+  "sensory-observation-device-001",
+  "structure",
+];
+
 /* 作品一覧（新しい順）
-   hero: true → トップのスライドショーに表示（heroImage があればそれを使用）
-   images の1枚目がサムネイルになります */
+   images の1枚目がサムネイル（作品ページの最初の写真）になります */
 const WORKS = [
   {
     id: "seven-eleven-texture",
@@ -89,7 +98,6 @@ const WORKS = [
     year: "2026",
     material: "セブンイレブン",
     category: "Research",
-    hero: false,
     images: ["assets/img/seven-1.jpg", "assets/img/seven-2.jpg", "assets/img/seven-3.jpg"],
     text: [
       "4年ほどセブンイレブン中野六丁目店で働いている。17時から18時の間に「商品」の詰まった段ボールが送られてくる。それから、私は中身をわからないものをひたすらに並べる作業をする。中身はわからないが、パッケージやラベルをみて、そのものが置かれるべき場所に配置していく。",
@@ -108,7 +116,6 @@ const WORKS = [
     year: "2026",
     material: "（仮）",
     category: "Installation",
-    hero: false,
     images: ["assets/img/shibuya-1.jpg", "assets/img/shibuya-2.jpg"],
     // 作品ページでトップ写真の次に表示するYouTube動画（IDのみ）
     youtube: "kD9faC07OQA",
@@ -123,7 +130,6 @@ const WORKS = [
     year: "2026",
     material: "透明樹脂、ひまわり",
     category: "Object",
-    hero: true,
     heroPosition: "center top", // スライドショーで花が切れないよう上端基準に
     images: ["assets/img/sunflower-1.jpg", "assets/img/sunflower-2.jpg", "assets/img/sunflower-3.jpg"],
     text: [
@@ -144,7 +150,6 @@ const WORKS = [
     year: "2026",
     material: "風",
     category: "Light",
-    hero: true,
     images: ["assets/img/wind-1.jpg", "assets/img/wind-2.jpg", "assets/img/wind-3.jpg", "assets/img/wind-4.jpg"],
     text: [
       "デジタル環境において、アルゴリズムは決定論的な構造に依存しているため、単体では真にランダムな数を生成することはできない。その様な背景において、風は予測困難かつ制御不能な自然現象として、「偶然性」を持つ貴重な存在になり得る。",
@@ -164,7 +169,6 @@ const WORKS = [
     year: "2026",
     material: "ミクストメディア",
     category: "Installation",
-    hero: false,
     images: ["assets/img/device004-3.jpg", "assets/img/device004-1.jpg", "assets/img/device004-2.jpg"],
     // 作品ページのトップに表示する動画（自動再生・ループ・無音）
     video: "assets/video/device004.mp4",
@@ -184,7 +188,6 @@ const WORKS = [
     year: "2026",
     material: "ミクストメディア",
     category: "Installation",
-    hero: false,
     images: ["assets/img/device003-1.jpg", "assets/img/device003-2.jpg", "assets/img/device003-3.jpg"],
     text: [
       "この装置は感覚的観察装置001の装置中央部の装置に回転装置を組み込んでいる。複製物が回転を行うことで静的な光の現象に動きが生み出されている。石の肌を直線的な光がなぞっている。冷たいレーザーの光と冷たくなった石の肌を使ってドラマチックな瞬間を生み出したかった。",
@@ -201,7 +204,6 @@ const WORKS = [
     year: "2026",
     material: "ミクストメディア",
     category: "Installation",
-    hero: false,
     images: ["assets/img/device002-3.jpg", "assets/img/device002-1.jpg", "assets/img/device002-2.jpg"],
     text: [
       "この装置は、高さ約1000mm、直径約400mmのキューブ状の形体で装置が組まれている。感覚的観察装置001の伊達冠石よりも、どっしりと構えたような安定した造形である。北極にある氷塊のような造形が、屈折によって糸くずの様な繊細な表情を生み出している。",
@@ -218,7 +220,6 @@ const WORKS = [
     year: "2025",
     material: "赤松、ボルトナット、綿布（生成り）",
     category: "Fashion",
-    hero: true,
     heroImage: "assets/img/kimama-3.jpg",
     images: ["assets/img/kimama-0.jpg", "assets/img/kimama-1.jpg", "assets/img/kimama-2.jpg", "assets/img/kimama-3.jpg"],
     text: [
@@ -240,11 +241,10 @@ const WORKS = [
     year: "2025",
     material: "ミクストメディア",
     category: "Installation",
-    hero: true,
     heroImage: "assets/img/device001-2.jpg",
     images: [
-      "assets/img/device001-1.jpg",
       "assets/img/device001-2.jpg",
+      "assets/img/device001-1.jpg",
       "assets/img/device001-3.jpg",
       "assets/img/device001-4.jpg",
       "assets/img/device001-5.jpg",
@@ -267,7 +267,6 @@ const WORKS = [
     year: "2024",
     material: "アクリル、ボルトナット",
     category: "Fashion",
-    hero: true,
     heroImage: "assets/img/structure-3.jpg",
     images: ["assets/img/structure-1.jpg", "assets/img/structure-2.jpg", "assets/img/structure-3.jpg"],
     text: [
@@ -287,7 +286,6 @@ const WORKS = [
     year: "2024",
     material: "赤松",
     category: "Furniture",
-    hero: false,
     images: ["assets/img/slits-1.jpg", "assets/img/slits-2.jpg", "assets/img/slits-3.jpg"],
     text: [
       "家具デザインの領域においては、針葉樹は、家具に向いていないとされてきた。その原因は柔らかさである。硬い広葉樹と比べて強度はない。柔らかいため、傷がつきやすいなどの問題がある。その問題に対して私は、「木は硬くないと家具に向いていない」という常識が針葉樹の可能性を隔てていると感じた。",
