@@ -102,24 +102,6 @@ const STONE_CONCEPT = {
    images の1枚目がサムネイル（作品ページの最初の写真）になります */
 const WORKS = [
   {
-    id: "seven-eleven-texture",
-    title: "セブンイレブン中野六丁目店のテクスチャ",
-    sub: "「商品」というテクスチャを「コンビニ」という場所に貼っていく",
-    date: "2026.10.26",
-    year: "2026",
-    material: "セブンイレブン",
-    category: "Research",
-    images: ["assets/img/seven-1.jpg", "assets/img/seven-2.jpg", "assets/img/seven-3.jpg"],
-    text: [
-      "4年ほどセブンイレブン中野六丁目店で働いている。17時から18時の間に「商品」の詰まった段ボールが送られてくる。それから、私は中身をわからないものをひたすらに並べる作業をする。中身はわからないが、パッケージやラベルをみて、そのものが置かれるべき場所に配置していく。",
-      "左の画像はセブンイレブン中野六丁目店の「テクスチャ」である。3Dスキャンというのは、物体の外側を写真で記録し、画像演算を行い、3Dデータになる。その際に、立体データとは別に「テクスチャー」が作られる。テクスチャを立体に貼ることで色や光の加減が表現される。店員の私は「セブンイレブン中野六丁目店」のテクスチャを重視しており、中身についてはあまり考えない。「商品」というテクスチャを「コンビニ」という場所に貼っていくのである。",
-    ],
-    textEn: [
-      "I’ve been working at the 7-Eleven Nakano 6-chome store for about four years. Between 5:00 p.m. and 6:00 p.m., cardboard boxes filled with “merchandise” are delivered. From then on, I spend my time simply stocking the shelves with items whose contents I don’t know. Although I don’t know what’s inside, I look at the packaging and labels to place each item where it belongs.",
-      "The image shows the “texture” at the 7-Eleven Nakano 6-chome store. A 3D scan involves photographing the exterior of an object, performing image processing, and converting it into 3D data. During this process, a “texture” is created separately from the 3D data. Applying the texture to the 3D model expresses color and lighting effects. As a store clerk, I place great importance on the “7-Eleven Nakano 6-chome” texture and don’t think much about the contents. I’m essentially applying the “product” texture to the “convenience store” space.",
-    ],
-  },
-  {
     id: "shibuya",
     title: "視覚の死角による四角",
     sub: "現在の渋谷の形状に、過去の渋谷のテクスチャーを重ねる",
@@ -137,6 +119,24 @@ const WORKS = [
       "完璧な街の再現ではなく、画像から立体化されるときのズレ、航空写真のズレによって、生じる陰影は見慣れた渋谷を別の姿に変え、自分が記憶している渋谷との違いを強く意識させる。",
     ],
     textEn: [],
+  },
+  {
+    id: "seven-eleven-texture",
+    title: "セブンイレブン中野六丁目店のテクスチャ",
+    sub: "「商品」というテクスチャを「コンビニ」という場所に貼っていく",
+    date: "2026.10.26",
+    year: "2026",
+    material: "セブンイレブン",
+    category: "Research",
+    images: ["assets/img/seven-1.jpg", "assets/img/seven-2.jpg", "assets/img/seven-3.jpg"],
+    text: [
+      "4年ほどセブンイレブン中野六丁目店で働いている。17時から18時の間に「商品」の詰まった段ボールが送られてくる。それから、私は中身をわからないものをひたすらに並べる作業をする。中身はわからないが、パッケージやラベルをみて、そのものが置かれるべき場所に配置していく。",
+      "左の画像はセブンイレブン中野六丁目店の「テクスチャ」である。3Dスキャンというのは、物体の外側を写真で記録し、画像演算を行い、3Dデータになる。その際に、立体データとは別に「テクスチャー」が作られる。テクスチャを立体に貼ることで色や光の加減が表現される。店員の私は「セブンイレブン中野六丁目店」のテクスチャを重視しており、中身についてはあまり考えない。「商品」というテクスチャを「コンビニ」という場所に貼っていくのである。",
+    ],
+    textEn: [
+      "I’ve been working at the 7-Eleven Nakano 6-chome store for about four years. Between 5:00 p.m. and 6:00 p.m., cardboard boxes filled with “merchandise” are delivered. From then on, I spend my time simply stocking the shelves with items whose contents I don’t know. Although I don’t know what’s inside, I look at the packaging and labels to place each item where it belongs.",
+      "The image shows the “texture” at the 7-Eleven Nakano 6-chome store. A 3D scan involves photographing the exterior of an object, performing image processing, and converting it into 3D data. During this process, a “texture” is created separately from the 3D data. Applying the texture to the 3D model expresses color and lighting effects. As a store clerk, I place great importance on the “7-Eleven Nakano 6-chome” texture and don’t think much about the contents. I’m essentially applying the “product” texture to the “convenience store” space.",
+    ],
   },
   {
     id: "from-sunflower",
