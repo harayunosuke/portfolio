@@ -258,7 +258,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 
 .cv { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); }
 .cv h2 { grid-column: 1 / 4; font-size: 13px; font-weight: 400; padding-top: 4px; }
-.cv ul { grid-column: 4 / 12; margin-bottom: 80px; }
+.cv ul { grid-column: 4 / 12; margin-bottom: 48px; }
 .cv li { display: grid; grid-template-columns: 8em 1fr; padding: 6px 0; border-top: 1px solid var(--line); }
 .cv li span:first-child { color: var(--mute); }
 
@@ -293,7 +293,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   .detail-head .page-title, .detail-head .detail-sub, .detail-meta, .detail-text,
   .detail-gallery img:nth-child(n), .cv h2, .cv ul, .cv-statement { grid-column: 1 / -1; }
   .detail-gallery { gap: 24px; }
-  .cv ul { margin-bottom: 48px; }
+  .cv ul { margin-bottom: 32px; }
 }
 
 /* スマホのheroは横スワイプで切替（縦スクロールは通常どおり） */
