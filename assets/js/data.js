@@ -145,7 +145,7 @@ const WORKS = [
     date: "2026.05.24",
     year: "2026",
     material: "透明樹脂、ひまわり",
-    category: "Object",
+    category: "Sculpture",
     heroPosition: "left top", // スライドショーで花が切れないよう左上基準に（スマホの正方形でも花が入る）
     images: ["assets/img/sunflower-1.jpg", "assets/img/sunflower-2.jpg", "assets/img/sunflower-3.jpg"],
     text: [
