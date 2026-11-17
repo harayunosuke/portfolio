@@ -244,7 +244,7 @@ const WORKS = [
     material: "赤松、ボルトナット、綿布（生成り）",
     category: "Fashion",
     heroImage: "assets/img/kimama-3.jpg",
-    images: ["assets/img/kimama-0.jpg", "assets/img/kimama-1.jpg", "assets/img/kimama-2.jpg", "assets/img/kimama-3.jpg"],
+    images: ["assets/img/kimama-0.jpg", "assets/img/kimama-2.jpg", "assets/img/kimama-3.jpg"],
     text: [
       "この作品の歩く動作に合わせて木材が揺蕩う姿は、普段私たちが認識している木材の硬く静的な印象とは異なる表情を見せる。身体の動きに追従しながらも、木材はその重さや柔軟性によって独自の動きを生み出し、まるで木材そのものが意思を持って動いているかのようにも感じられる。",
       "木材は硬く、形を保つための素材であるという認識が、身体との関係によって変化する。人間が木材を動かしているはずなのに、その動きは必ずしも人間の意図どおりにはならない。身体の動きによって生じた揺れが、木材自身の性質によって変化していく様子から、素材は単に人間の意図を実現するための受動的な存在ではないのではないかと考えた。",
