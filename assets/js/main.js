@@ -240,31 +240,28 @@
   const jumpTo = (hash, smooth) => {
     const el = hash && hash.length > 1 && document.getElementById(hash.slice(1));
     if (!el) return;
-    // 目的地より上の遅延読み込み画像を先に読み込ませ、レイアウトを早く確定させる
+    // 目的地より上の遅延読み込み画像を先に読み込ませる
     $$('img[loading="lazy"]').forEach((img) => (img.loading = "eager"));
     const target = () => Math.min(el.getBoundingClientRect().top + window.scrollY, document.documentElement.scrollHeight - window.innerHeight);
-    const behavior = smooth ? "smooth" : "instant";
-    window.scrollTo({ top: target(), behavior });
-    // スクロールが止まってから、ずれていればもう一度移動（途中で一気に飛ばさない）
-    let cancelled = false, last = -1, still = 0, rounds = 0;
-    const until = Date.now() + 4000;
+    const to = (y) => window.scrollTo({ top: y, behavior: "instant" });
+    let cancelled = false;
     const cancel = () => (cancelled = true);
     ["touchstart", "wheel"].forEach((ev) => window.addEventListener(ev, cancel, { passive: true, once: true }));
-    const check = () => {
-      if (cancelled || Date.now() > until) return;
-      const y = window.scrollY;
-      still = Math.abs(y - last) < 1 ? still + 1 : 0;
-      last = y;
-      if (still >= 2) {
-        const t = target();
-        if (Math.abs(y - t) <= 4) return; // 到着
-        if (++rounds > 6) return;
-        window.scrollTo({ top: t, behavior });
-        still = 0;
-      }
-      setTimeout(check, 120);
+    // 移動しながら毎フレーム行き先を計算し直す（画像の読み込みでページが伸びても途中で止まらない）
+    const startY = window.scrollY;
+    const dur = smooth ? Math.min(1400, 600 + Math.abs(target() - startY) * 0.12) : 0;
+    const t0 = performance.now();
+    const ease = (t) => 1 - Math.pow(1 - t, 3);
+    const until = t0 + dur + 3000;
+    const step = (now) => {
+      if (cancelled) return;
+      const p = dur ? Math.min(1, (now - t0) / dur) : 1;
+      const t = target();
+      to(startY + (t - startY) * ease(p));
+      // 到着後もしばらくは、レイアウトが動いたら追従
+      if (p < 1 || (now < until && Math.abs(window.scrollY - target()) > 1) || now < t0 + dur + 600) requestAnimationFrame(step);
     };
-    setTimeout(check, 200);
+    requestAnimationFrame(step);
   };
   $$('a[href^="#"]').forEach((a) =>
     a.addEventListener("click", (e) => {
