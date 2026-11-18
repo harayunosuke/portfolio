@@ -71,14 +71,12 @@
     $$(".hero-img", slidesEl).forEach((img) => img.addEventListener("load", fitHero));
     window.addEventListener("resize", fitHero);
     fitHero();
-    const count = $("#heroCount");
     const title = $("#heroTitle");
     let idx = 0;
     const show = (i) => {
       slides[idx].classList.remove("is-active");
       idx = (i + slides.length) % slides.length;
       slides[idx].classList.add("is-active");
-      count.textContent = `${idx + 1} / ${slides.length}`;
       title.textContent = heroWorks[idx].title;
       title.href = workUrl(heroWorks[idx]);
     };
