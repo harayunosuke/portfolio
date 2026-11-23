@@ -212,8 +212,7 @@ const WORKS = [
     year: "2026",
     material: "ミクストメディア",
     category: "Installation",
-    thumb: "assets/img/device003-2.jpg",
-    images: ["assets/img/device-stone.jpg", "assets/img/device003-2.jpg", "assets/img/device003-1.jpg", "assets/img/device003-3.jpg"],
+    images: ["assets/img/device003-2.jpg", "assets/img/device-stone.jpg", "assets/img/device003-1.jpg", "assets/img/device003-3.jpg"],
     // 作品ページでトップ写真の次に表示する動画
     clip: { src: "assets/video/device003-max.mp4", poster: "assets/video/device003-poster.jpg" },
     text: [
@@ -249,8 +248,7 @@ const WORKS = [
     year: "2026",
     material: "ミクストメディア",
     category: "Installation",
-    thumb: "assets/img/device002-3.jpg",
-    images: ["assets/img/device-stone.jpg", "assets/img/device002-3.jpg", "assets/img/device002-1.jpg", "assets/img/device002-2.jpg"],
+    images: ["assets/img/device002-3.jpg", "assets/img/device-stone.jpg", "assets/img/device002-1.jpg", "assets/img/device002-2.jpg"],
     text: [
       "この装置は、高さ約1000mm、直径約400mmのキューブ状の形体で装置が組まれている。感覚的観察装置001の伊達冠石よりも、どっしりと構えたような安定した造形である。北極にある氷塊のような造形が、屈折によって糸くずの様な繊細な表情を生み出している。",
       ...STONE_CONCEPT.ja,
@@ -291,10 +289,9 @@ const WORKS = [
     material: "ミクストメディア",
     category: "Installation",
     heroImage: "assets/img/device001-2.jpg",
-    thumb: "assets/img/device001-2.jpg",
     images: [
-      "assets/img/device-stone.jpg",
       "assets/img/device001-2.jpg",
+      "assets/img/device-stone.jpg",
       "assets/img/device001-1.jpg",
       "assets/img/device001-3.jpg",
       "assets/img/device001-4.jpg",
