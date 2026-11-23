@@ -3,7 +3,7 @@
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const workUrl = (w) => `work.html?id=${encodeURIComponent(w.id)}`;
   let io;
-  const paras = (arr) => [].concat(arr || []).map((t) => `<p>${t}</p>`).join("");
+  const paras = (arr) => [].concat(arr || []).map((t) => (t.startsWith("# ") ? `<h3>${t.slice(2)}</h3>` : `<p>${t}</p>`)).join("");
 
   /* ---- About page ---- */
   const st = $("#statement");
