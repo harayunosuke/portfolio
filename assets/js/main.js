@@ -123,7 +123,7 @@
       .map(
         (w) => `<article class="work-item reveal" data-id="${w.id}">
           <a href="${workUrl(w)}">
-            <div class="work-thumb"><img src="${w.images[0]}" alt="${w.title}" loading="lazy"></div>
+            <div class="work-thumb"><img src="${w.thumb || w.images[0]}" alt="${w.title}" loading="lazy"></div>
             <div class="work-meta"><span class="work-title">${w.title}</span><span class="work-sub">${w.sub}</span></div>
           </a></article>`
       )
@@ -144,7 +144,7 @@
           (w) => `<article class="reveal"><a href="${workUrl(w)}">
             <div class="work-thumb${w.images.length ? "" : " placeholder"}">${
               w.images.length
-                ? `<img class="thumb-bg" src="${w.images[0]}" alt="" aria-hidden="true" loading="lazy"><img class="thumb-img" src="${w.images[0]}" alt="${w.title}" loading="lazy">`
+                ? `<img class="thumb-bg" src="${w.thumb || w.images[0]}" alt="" aria-hidden="true" loading="lazy"><img class="thumb-img" src="${w.thumb || w.images[0]}" alt="${w.title}" loading="lazy">`
                 : "Image coming soon"
             }</div>
             <div class="work-meta"><span class="work-title">${w.title}</span><span class="work-sub">${w.year} — ${w.category}</span></div>
