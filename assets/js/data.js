@@ -112,7 +112,7 @@ const WORKS = [
     material: "ミクストメディア",
     category: "Installation",
     heroImage: "assets/img/shibuya-hero.jpg", // スライドショー用（高画質 3200px）
-    images: ["assets/img/shibuya-1.jpg", "assets/img/shibuya-2.jpg"],
+    images: ["assets/img/shibuya-1.jpg", "assets/img/shibuya-2.jpg", "assets/img/shibuya-3.jpg"],
     // 作品ページでトップ写真の次に表示する動画
     clip: { src: "assets/video/shibuya.mp4", poster: "assets/video/shibuya-poster.jpg" },
     text: [
