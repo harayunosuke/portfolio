@@ -111,6 +111,7 @@ const WORKS = [
     year: "2026",
     material: "ミクストメディア",
     category: "Installation",
+    exhibitions: [["2026", "「Work in Progress」", "武蔵野美術大学 / ando lab"]],
     heroImage: "assets/img/shibuya-hero.jpg", // スライドショー用（高画質 3200px）
     images: ["assets/img/shibuya-1.jpg", "assets/img/shibuya-2.jpg", "assets/img/shibuya-3.jpg"],
     // 作品ページでトップ写真の次に表示する動画
