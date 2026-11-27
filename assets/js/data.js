@@ -212,6 +212,7 @@ const WORKS = [
     year: "2026",
     material: "ミクストメディア",
     category: "Installation",
+    exhibitions: [["2026", "「SICF27」", "EXHIBITION部門 / スパイラルホール"]],
     images: ["assets/img/device003-2.jpg", "assets/img/device-stone.jpg", "assets/img/device003-1.jpg", "assets/img/device003-3.jpg"],
     // 作品ページでトップ写真の次に表示する動画
     clip: { src: "assets/video/device003-max.mp4", poster: "assets/video/device003-poster.jpg" },
