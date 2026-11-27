@@ -257,6 +257,7 @@ const WORKS = [
     material: "赤松、ボルトナット、綿布（生成り）",
     category: "Fashion",
     collab: "廣藤拓海",
+    exhibitions: [["2025", "「設計図」", "Keio Fashion Creator / テレコムセンター"]],
     heroImage: "assets/img/kimama-3.jpg",
     images: ["assets/img/kimama-0.jpg", "assets/img/kimama-2.jpg", "assets/img/kimama-3.jpg"],
     text: [

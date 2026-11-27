@@ -205,11 +205,12 @@
           .filter(([, v]) => v)
           .map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`)
           .join("")}</dl>${
-          w.awards && w.awards.length
-            ? `<div class="detail-awards"><h2>Award</h2><ul>${w.awards
+          [["Exhibition", w.exhibitions], ["Award", w.awards]]
+            .filter(([, list]) => list && list.length)
+            .map(([h, list]) => `<div class="detail-awards"><h2>${h}</h2><ul>${list
                 .map(([y, a, v]) => `<li><span>${y}</span><span>${a}${v ? `<small>${v}</small>` : ""}</span></li>`)
-                .join("")}</ul></div>`
-            : ""
+                .join("")}</ul></div>`)
+            .join("")
         }</div>
         <div class="detail-text">
           ${paras(w.text)}
